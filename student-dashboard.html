@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Student Dashboard - LMS</title>
+    <link rel="stylesheet" href="student-dashboard.css">
+</head>
+<body>
+   
+
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Student LMS</h2>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#courses">Browse Courses</a>
+            <a href="#enrolled">My Courses</a>
+            <a href="#materials">Learning Materials</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#quiz">Quizzes</a>
+            <a href="#grades">Grades</a>
+            <a href="#progress">Learning Progress</a>
+            <a href="#notifications">Notifications</a>
+        </nav>
+
+        <button id="logoutBtn">Logout</button>
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header id="dashboard">
+            <h1>Student Dashboard</h1>
+            <p>Welcome to your learning dashboard.</p>
+        </header>
+
+
+        <!-- Dashboard Summary -->
+        <section class="summary-cards">
+
+            <div class="summary-card">
+                <h3>Enrolled Courses</h3>
+                <p id="courseCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Assignments</h3>
+                <p id="assignmentCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Completed Quizzes</h3>
+                <p id="quizCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Notifications</h3>
+                <p id="notificationCount">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Browse Courses -->
+        <section id="courses">
+            <h2>Browse Courses</h2>
+
+            <div class="course-container">
+
+                <div class="course-card">
+                    <h3>Web Development</h3>
+                    <p>Learn HTML, CSS and JavaScript.</p>
+                    <button class="enroll-btn" data-course="Web Development">
+                        Enroll in Course
+                    </button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Database Management</h3>
+                    <p>Learn database concepts and SQL.</p>
+                    <button class="enroll-btn" data-course="Database Management">
+                        Enroll in Course
+                    </button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Programming with C++</h3>
+                    <p>Learn programming fundamentals.</p>
+                    <button class="enroll-btn" data-course="Programming with C++">
+                        Enroll in Course
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Enrolled Courses -->
+        <section id="enrolled">
+            <h2>My Enrolled Courses</h2>
+            <ul id="enrolledCourses">
+                <li>No enrolled courses.</li>
+            </ul>
+        </section>
+
+
+        <!-- Learning Materials -->
+        <section id="materials">
+            <h2>Learning Materials</h2>
+
+            <div id="materialsList">
+                <p>No learning materials available yet.</p>
+            </div>
+        </section>
+
+
+        <!-- Submit Assignment -->
+        <section id="assignments">
+            <h2>Submit Assignment</h2>
+
+            <form id="assignmentForm">
+                <label for="assignmentText">Assignment Details</label>
+
+                <textarea
+                    id="assignmentText"
+                    placeholder="Write your assignment here..."
+                    required>
+                </textarea>
+
+                <button type="submit">Submit Assignment</button>
+
+                <p id="assignmentMessage" class="message"></p>
+            </form>
+        </section>
+
+
+        <!-- Attempt Quiz -->
+        <section id="quiz">
+            <h2>Attempt Quiz</h2>
+
+            <!--form id="quizForm">
+
+                <h3>What does HTML stand for?</h3>
+
+                <label>
+                    <input type="radio" name="answer" value="a">
+                    Hyper Text Markup Language
+                </label>
+
+                <label>
+                    <input type="radio" name="answer" value="b">
+                    High Text Machine Language
+                </label>
+
+                <label>
+                    <input type="radio" name="answer" value="c">
+                    Hyper Tool Multi Language
+                </label>
+
+                <label>
+                    <input type="radio" name="answer" value="d">
+                    Home Text Markup Language
+                </label>
+
+                <button type="submit">Submit Quiz</button>
+
+                <p id="quizResult" class="message"></p>
+            </form>
+        </section>
+
+
+        <!-- Grades -->
+        <section id="grades">
+            <h2>View Grades</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Assessment</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+
+                <tbody id="gradesTable">
+                    <tr>
+                        <td colspan="2">No grades available.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- Learning Progress -->
+        <section id="progress">
+            <h2>Learning Progress</h2>
+
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <p id="progressText">0% completed</p>
+        </section>
+
+
+        <!-- Notifications -->
+        <section id="notifications">
+            <h2>Notifications</h2>
+
+            <ul id="notificationList">
+                <li>No new notifications.</li>
+            </ul>
+        </section>
+
+
+        <footer>
+            <p>Online Learning Management System</p>
+        </footer>
+
+    </main>
+
+    <script src="student-dashboard.js"></script>
+
+</body>
+</html>
+ 
+
+
+   
+

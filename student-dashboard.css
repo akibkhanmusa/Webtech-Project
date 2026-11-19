@@ -1,0 +1,325 @@
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #333;
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #26345c;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    background: #43578e;
+}
+
+#logoutBtn {
+    margin-top: auto;
+    padding: 12px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutBtn:hover {
+    background: #c0392b;
+}
+
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #666;
+}
+
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.summary-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.summary-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #26345c;
+}
+
+
+/* Sections */
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    color: #26345c;
+    margin-bottom: 20px;
+}
+
+
+/* Course Cards */
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    background: #f4f6fb;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.course-card h3 {
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background: #26345c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #43578e;
+}
+
+button:disabled {
+    background: #888;
+    cursor: not-allowed;
+}
+
+
+/* Lists */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+/* Assignment and Quiz */
+form label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #26345c;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+form h3 {
+    margin-bottom: 15px;
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+
+/* Grades Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 13px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #26345c;
+    color: white;
+}
+
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 25px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #27ae60;
+    transition: width 0.4s;
+}
+
+
+/* Notifications */
+#notificationList li {
+    background: #f4f6fb;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #logoutBtn {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .summary-cards,
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 12px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
